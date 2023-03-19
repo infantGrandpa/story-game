@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "character": "Ole Posen",
+        "gender": "Male",
+        "msg_color": "#48b421"
+    },
+    {
+        "id": 2,
+        "character": "Kelbee MacTague",
+        "gender": "Male",
+        "msg_color": "#8446e0"
+    },
+    {
+        "id": 3,
+        "character": "Tessa Beamiss",
+        "gender": "Female",
+        "msg_color": "#49c239"
+    },
+    {
+        "id": 4,
+        "character": "Davidson Lyokhin",
+        "gender": "Male",
+        "msg_color": "#bcb028"
+    },
+    {
+        "id": 5,
+        "character": "Violet Hankin",
+        "gender": "Female",
+        "msg_color": "#69a576"
+    },
+    {
+        "id": 6,
+        "character": "Penrod Canizares",
+        "gender": "Male",
+        "msg_color": "#ba80a0"
+    },
+    {
+        "id": 7,
+        "character": "Laura Petroff",
+        "gender": "Female",
+        "msg_color": "#6d37e2"
+    },
+    {
+        "id": 8,
+        "character": "Benito Bathow",
+        "gender": "Male",
+        "msg_color": "#c2eb89"
+    },
+    {
+        "id": 9,
+        "character": "Angel Pringley",
+        "gender": "Female",
+        "msg_color": "#581ea6"
+    },
+    {
+        "id": 10,
+        "character": "Leopold Barnhill",
+        "gender": "Male",
+        "msg_color": "#d90c3e"
+    },
+    {
+        "id": 11,
+        "character": "Sofia Cicchillo",
+        "gender": "Female",
+        "msg_color": "#2f6f68"
+    },
+    {
+        "id": 12,
+        "character": "Claribel Demare",
+        "gender": "Female",
+        "msg_color": "#e990a4"
+    },
+    {
+        "id": 13,
+        "character": "Friedrich Ivey",
+        "gender": "Male",
+        "msg_color": "#ac2e08"
+    },
+    {
+        "id": 14,
+        "character": "Carson Aloshkin",
+        "gender": "Male",
+        "msg_color": "#eff464"
+    },
+    {
+        "id": 15,
+        "character": "Mary Salazar",
+        "gender": "Polygender",
+        "msg_color": "#88cd89"
+    },
+    {
+        "id": 16,
+        "character": "Sheppard Simon",
+        "gender": "Male",
+        "msg_color": "#b4226d"
+    },
+    {
+        "id": 17,
+        "character": "Josiah Fryett",
+        "gender": "Male",
+        "msg_color": "#2370f5"
+    },
+    {
+        "id": 18,
+        "character": "Fleurette Lomaz",
+        "gender": "Female",
+        "msg_color": "#5c69c0"
+    },
+    {
+        "id": 19,
+        "character": "Ernestus MacDougal",
+        "gender": "Male",
+        "msg_color": "#a53063"
+    },
+    {
+        "id": 20,
+        "character": "Netti Benterman",
+        "gender": "Female",
+        "msg_color": "#c71145"
+    }
+]
