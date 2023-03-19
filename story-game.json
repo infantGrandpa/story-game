@@ -11,7 +11,11 @@
             "TechnicalName": "FFr_A6713C09",
             "Id": "0x010000000000011B",
             "Parent": "0x0300000043CE43F7",
-            "Attachments": [],
+            "Attachments": [
+              "0x0100000000000117",
+              "0x0100000000000113",
+              "0x010000000000010F"
+            ],
             "DisplayName": "Test Scene 1",
             "PreviewImage": {
               "ViewBox": {
@@ -301,7 +305,7 @@
               "g": 0.75686276,
               "b": 0.8
             },
-            "Text": "Relax. He was just joking. Weren't you?",
+            "Text": "Relax. They were just joking. Weren't you?",
             "ExternalId": "",
             "Position": {
               "x": 1525.0,
@@ -477,7 +481,7 @@
               "g": 0.75686276,
               "b": 0.8
             },
-            "Text": "Oh man, I've got to go. See ya!",
+            "Text": "Oh wow, I've got to go. See ya!",
             "ExternalId": "",
             "Position": {
               "x": 2225.0,
@@ -593,11 +597,11 @@
               "FurtherDetails": ""
             },
             "DefaultBasicCharacterFeature": {
-              "Age": null,
-              "Species": "",
-              "BornIn": "",
-              "Sex": null,
-              "Occupation": "",
+              "Age": 21.0,
+              "Species": "Human",
+              "BornIn": "Forest",
+              "Sex": 2,
+              "Occupation": "Hunter?",
               "Accent": "",
               "Personality": "",
               "Appearance": ""
@@ -642,11 +646,11 @@
           },
           "Template": {
             "DefaultBasicCharacterFeature": {
-              "Age": null,
-              "Species": "",
-              "BornIn": "",
-              "Sex": null,
-              "Occupation": "",
+              "Age": 25.0,
+              "Species": "Human",
+              "BornIn": "Town",
+              "Sex": 0,
+              "Occupation": "Unknown",
               "Accent": "",
               "Personality": "",
               "Appearance": ""
@@ -691,11 +695,11 @@
           },
           "Template": {
             "DefaultBasicCharacterFeature": {
-              "Age": null,
-              "Species": "",
-              "BornIn": "",
-              "Sex": null,
-              "Occupation": "",
+              "Age": 28.0,
+              "Species": "Human",
+              "BornIn": "Town",
+              "Sex": 1,
+              "Occupation": "Painter",
               "Accent": "",
               "Personality": "",
               "Appearance": ""

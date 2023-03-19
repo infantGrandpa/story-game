@@ -54,7 +54,6 @@ function populateHeroes(obj) {
 
 async function fetchDataLocal() {
 
-
     const requestURL = 'https://raw.githubusercontent.com/infantGrandpa/story-game/main/story-game.json';
     const request = new Request(requestURL);
 
