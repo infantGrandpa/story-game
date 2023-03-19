@@ -1,5 +1,3 @@
-import jsonData from 'mock-data.json';
-
 async function fetchData() {
 
     const requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
@@ -54,25 +52,32 @@ function populateHeroes(obj) {
 
 }
 
-function fetchDataLocal() {
+async function fetchDataLocal() {
 
-    const jsonFile = 'mock-data.json';
-    
-    const myData = JSON.parse(jsonData);
-    console.log(myData);
 
-    /*     const requestURL = 'MOCK_DATA.json';
-    
-        const data = fetch(requestURL);
-    
-        console.log(data);
-    
-        const characters = data.json();
-    
-        populateCharacters(characters); */
+    const requestURL = 'https://raw.githubusercontent.com/infantGrandpa/story-game/main/story-game.json';
+    const request = new Request(requestURL);
+
+    const response = await fetch(request);
+    const characters = await response.json();
+
+    populateCharacters(characters);
 }
 
 function populateCharacters(obj) {
+
+    const characters = obj;
+    console.log(characters);
+
+    for (const thisCharacter of characters) {
+        let thisString = "";
+        thisString += "ID: " + thisCharacter.id;
+        thisString += " Name: " + thisCharacter.character;
+        thisString += " Gender: " + thisCharacter.gender;
+        thisString += " Color: " + thisCharacter.msg_color;
+
+        console.log(thisString);
+    }
 
 }
 
