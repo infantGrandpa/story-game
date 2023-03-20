@@ -52,39 +52,35 @@ function populateHeroes(obj) {
 
 }
 
-async function fetchDataLocal() {
+async function fetchCharacters() {
 
-    const requestURL = 'https://raw.githubusercontent.com/infantGrandpa/story-game/main/story-game.json';
+    const requestURL = 'https://raw.githubusercontent.com/infantGrandpa/story-game/main/data/characters.json';
     const request = new Request(requestURL);
 
     const response = await fetch(request);
     const data = await response.json();
 
-    const packageData = data.Packages[0];
-    const modelsData = packageData.Models;
-
-    populateModels(modelsData);
+    populateCharacters(data);
 }
 
-function populateModels(obj) {
+function populateCharacters(obj) {
 
     const section = document.querySelector('section');
 
     const characters = obj;
-    console.log(characters);
 
-    const typeList = document.createElement('ul');
+    const characterList = document.createElement('ul');
 
-    for (const thisModel of obj) {
-        const type = thisModel.Type;
+    for (const thisCharacter of characters) {
+        const name = thisCharacter.name;
         const newListItem = document.createElement('li');
-        newListItem.textContent = type;
-        typeList.appendChild(newListItem);
+        newListItem.textContent = name;
+        characterList.appendChild(newListItem);
     }
 
-    section.appendChild(typeList);
+    section.appendChild(characterList);
 
 }
 
-fetchDataLocal();
+fetchCharacters();
 

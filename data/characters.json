@@ -1,19 +1,19 @@
 [
     {
         "id": 0,
-        "character": "Person A",
+        "name": "Person A",
         "gender": "Male",
         "msgColor": "#48b421"
     },
     {
         "id": 1,
-        "character": "Person B",
+        "name": "Person B",
         "gender": "Female",
         "msgColor": "#8446e0"
     },
     {
         "id": 2,
-        "character": "Person C",
+        "name": "Person C",
         "gender": "Female",
         "msgColor": "#49c239"
     }
