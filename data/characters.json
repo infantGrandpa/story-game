@@ -1,0 +1,20 @@
+[
+    {
+        "id": 0,
+        "character": "Person A",
+        "gender": "Male",
+        "msgColor": "#48b421"
+    },
+    {
+        "id": 1,
+        "character": "Person B",
+        "gender": "Female",
+        "msgColor": "#8446e0"
+    },
+    {
+        "id": 2,
+        "character": "Person C",
+        "gender": "Female",
+        "msgColor": "#49c239"
+    }
+]

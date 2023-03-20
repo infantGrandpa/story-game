@@ -58,25 +58,31 @@ async function fetchDataLocal() {
     const request = new Request(requestURL);
 
     const response = await fetch(request);
-    const characters = await response.json();
+    const data = await response.json();
 
-    populateCharacters(characters);
+    const packageData = data.Packages[0];
+    const modelsData = packageData.Models;
+
+    populateModels(modelsData);
 }
 
-function populateCharacters(obj) {
+function populateModels(obj) {
+
+    const section = document.querySelector('section');
 
     const characters = obj;
     console.log(characters);
 
-    for (const thisCharacter of characters) {
-        let thisString = "";
-        thisString += "ID: " + thisCharacter.id;
-        thisString += " Name: " + thisCharacter.character;
-        thisString += " Gender: " + thisCharacter.gender;
-        thisString += " Color: " + thisCharacter.msg_color;
+    const typeList = document.createElement('ul');
 
-        console.log(thisString);
+    for (const thisModel of obj) {
+        const type = thisModel.Type;
+        const newListItem = document.createElement('li');
+        newListItem.textContent = type;
+        typeList.appendChild(newListItem);
     }
+
+    section.appendChild(typeList);
 
 }
 

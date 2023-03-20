@@ -1,0 +1,33 @@
+[
+    {
+        "id": 0,
+        "speakerID": "0",
+        "text": "Hey guys, have you heard about the new project we're working on?",
+        "nextLine": 1
+    },
+    {
+        "id": 1,
+        "speakerID": "1",
+        "text": "No, what's going on?",
+        "nextLine": 2
+    },
+    {
+        "id": 2,
+        "speakerID": "0",
+        "text": "Well, it's top secret. We can't talk about it to anyone outside the team.",
+        "nextLine": 3
+    },
+    {
+        "id": 3,
+        "speakerID": "2",
+        "text": "(whispers) Actually, I have a secret too.",
+        "nextLine": 4
+    },
+    {
+        "id": 4,
+        "speakerID": "0",
+        "text": "What secret?",
+        "nextLine": 5
+    }
+    
+]
