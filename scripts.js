@@ -110,8 +110,14 @@ function ShowCurrentDialog() {
 function CreateMessage(dialogObj) {
     const section = document.querySelector('.conversation');
 
+    const character = GetCharacterByID(dialogObj.speakerID);
+
     let msg = document.createElement('li');
     msg.classList.add('message');
+
+    if (character.isMain == true) {
+        msg.classList.add('outgoing');
+    }
 
     let card = document.createElement('div');
     card.classList.add('card');
@@ -123,7 +129,7 @@ function CreateMessage(dialogObj) {
 
     let author = document.createElement('small');
     author.classList.add('author');
-    author.textContent = GetCharacterByID(dialogObj.speakerID).name;
+    author.textContent = character.name;
 
     card.appendChild(body);
     msg.appendChild(card);
