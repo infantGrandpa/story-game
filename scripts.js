@@ -111,22 +111,17 @@ function CreateMessage(dialogObj) {
     const section = document.querySelector('.conversation');
 
     const character = GetCharacterByID(dialogObj.speakerID);
-    const isMain = character.isMain;
+    const characterType = character.type;
 
     let msg = document.createElement('li');
     msg.classList.add('message');
+    msg = SetMsgClassByType(msg, characterType);
 
-    if (isMain) {
-        msg.classList.add('outgoing');
-    }
 
     let card = document.createElement('div');
     card.classList.add('card');
-    if (isMain) {
-        card.classList.add('text-bg-light');
-    } else {
-        card.classList.add('text-bg-primary');
-    }
+    card = SetCardColors(card, character);
+
 
     let body = document.createElement('div');
     body.classList.add('card-body');
@@ -144,6 +139,53 @@ function CreateMessage(dialogObj) {
 
     currentDialogID = dialogObj.nextLine;
 
+}
+
+function SetMsgClassByType(msg, characterType) {
+    changedMsg = msg;
+
+    switch (characterType) {
+        case 'main':
+            changedMsg.classList.add('outgoing');
+            break;
+        case 'narrator':
+            changedMsg.classList.add('narrator');
+            break;
+        default:
+            changedMsg.classList.add('incoming');
+            break;
+    }
+
+    return changedMsg;
+}
+
+function SetCardColorsByType(card, characterType) {
+    let changedCard = card;
+
+    switch (characterType) {
+        case 'main':
+            changedCard.classList.add('text-bg-light');
+            break;
+        case 'narrator':
+            changedCard.classList.add('text-bg-dark');
+            break;
+        default:
+            changedCard.classList.add('text-bg-primary');
+            break;
+    }
+
+    return changedCard;
+}
+
+function SetCardColors(card, character) {
+    let changedCard = card;
+    let backgroundColor = character.bodyColor;
+    let color = character.textColor;
+
+    changedCard.style.backgroundColor = backgroundColor;
+    changedCard.style.color = color;
+
+    return changedCard;
 }
 
 function GetCharacterByID(id) {

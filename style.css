@@ -9,14 +9,16 @@ body {
 }
 
 .conversation {
-    max-width: 576px;
+    max-width: 425px;
     margin-left: auto;
     margin-right: auto;
+    padding: 0;
 }
 
 .message {
-    max-width: 75%;
+    max-width: 90%;
     list-style-type: none;  
+    padding: 4px 0;
 }
 
 .message > .card {
@@ -25,7 +27,6 @@ body {
 
 .message.outgoing {
     margin-left: auto;
-    text-align: right;
 }
 
 .message.outgoing > .card {
@@ -33,5 +34,16 @@ body {
 }
 
 .card-body {
-    padding: 8px;
+    padding: 8px 12px;
+}
+
+.message.narrator {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    font-style: italic;
+}
+
+.message.narrator > .card {
+    border-radius: 10px;
 }
