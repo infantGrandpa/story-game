@@ -1,3 +1,7 @@
+let characterData;
+let dialogData;
+let currentDialogID;
+
 async function fetchData() {
 
     const requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
@@ -52,23 +56,32 @@ function populateHeroes(obj) {
 
 }
 
-async function fetchCharacters() {
+async function FetchCharacters() {
 
     const requestURL = 'https://raw.githubusercontent.com/infantGrandpa/story-game/main/data/characters.json';
     const request = new Request(requestURL);
 
     const response = await fetch(request);
-    const data = await response.json();
+    characterData = await response.json();
 
-    populateCharacters(data);
 }
 
-function populateCharacters(obj) {
+async function FetchDialog() {
+    const requestURL = 'https://raw.githubusercontent.com/infantGrandpa/story-game/main/data/dialogue.json';
+    const request = new Request(requestURL);
+
+    const response = await fetch(request);
+    dialogData = await response.json();
+
+    currentDialogID = 0;
+
+}
+
+function PopulateCharacters(obj) {
 
     const section = document.querySelector('.conversation');
 
     const characters = obj;
-    console.log(characters)
 
     const characterList = document.createElement('ul');
 
@@ -83,9 +96,49 @@ function populateCharacters(obj) {
 
 }
 
-function createMessage(obj) {
+function ShowCurrentDialog() {
+
+    thisDialogObj = dialogData[currentDialogID]
+    if (thisDialogObj === undefined) {
+        console.log("Next dialogue is undefined");
+        return;
+    }
+
+    CreateMessage(thisDialogObj);
+}
+
+function CreateMessage(dialogObj) {
+    const section = document.querySelector('.conversation');
+
+    let msg = document.createElement('li');
+    msg.classList.add('message');
+
+    let card = document.createElement('div');
+    card.classList.add('card');
+    card.classList.add('text-bg-primary');
+
+    let body = document.createElement('div');
+    body.classList.add('card-body');
+    body.textContent = dialogObj.text;
+
+    let author = document.createElement('small');
+    author.classList.add('author');
+    author.textContent = GetCharacterByID(dialogObj.speakerID).name;
+
+    card.appendChild(body);
+    msg.appendChild(card);
+    msg.appendChild(author);
+
+    section.appendChild(msg);
+
+    currentDialogID = dialogObj.nextLine;
 
 }
 
-fetchCharacters();
+function GetCharacterByID(id) {
+    return characterData[id]
+}
+
+FetchCharacters();
+FetchDialog();
 
