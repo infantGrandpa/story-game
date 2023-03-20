@@ -3,18 +3,21 @@
         "id": 0,
         "name": "Person A",
         "gender": "Male",
-        "msgColor": "#48b421"
+        "msgColor": "#48b421",
+        "isMain": "True"
     },
     {
         "id": 1,
         "name": "Person B",
         "gender": "Female",
-        "msgColor": "#8446e0"
+        "msgColor": "#8446e0",
+        "isMain": "False"
     },
     {
         "id": 2,
         "name": "Person C",
         "gender": "Female",
-        "msgColor": "#49c239"
+        "msgColor": "#49c239",
+        "isMain": "False"
     }
 ]

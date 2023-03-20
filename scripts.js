@@ -65,9 +65,10 @@ async function fetchCharacters() {
 
 function populateCharacters(obj) {
 
-    const section = document.querySelector('section');
+    const section = document.querySelector('.conversation');
 
     const characters = obj;
+    console.log(characters)
 
     const characterList = document.createElement('ul');
 
@@ -79,6 +80,10 @@ function populateCharacters(obj) {
     }
 
     section.appendChild(characterList);
+
+}
+
+function createMessage(obj) {
 
 }
 
