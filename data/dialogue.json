@@ -1,32 +1,110 @@
 [
     {
         "id": 0,
-        "speakerID": "0",
+        "speakerID": 0,
         "text": "Hey guys, have you heard about the new project we're working on?",
         "nextLine": 1
     },
     {
         "id": 1,
-        "speakerID": "1",
+        "speakerID": 1,
         "text": "No, what's going on?",
         "nextLine": 2
     },
     {
         "id": 2,
-        "speakerID": "0",
+        "speakerID": 0,
         "text": "Well, it's top secret. We can't talk about it to anyone outside the team.",
         "nextLine": 3
     },
     {
         "id": 3,
-        "speakerID": "2",
+        "speakerID": 2,
         "text": "(whispers) Actually, I have a secret too.",
         "nextLine": 4
     },
     {
         "id": 4,
-        "speakerID": "0",
+        "speakerID": 0,
         "text": "What secret?",
+        "nextLine": 5
+    },
+    {
+        "id": 5,
+        "speakerID": 2,
+        "text": "I can't say it out loud here. Can we talk in private?",
+        "nextLine": 6
+    },
+    {
+        "id": 6,
+        "speakerID": 1,
+        "text": "Uh oh, this sounds serious.",
+        "nextLine": 7
+    },
+    {
+        "id": 7,
+        "speakerID": 0,
+        "text": "Yeah, let's go to my office. We can talk there.",
+        "nextLine": 8
+    },
+    {
+        "id": 8,
+        "speakerID": 3,
+        "text": "All three go to Person A's office",
+        "nextLine": 9
+    },
+    {
+        "id": 9,
+        "speakerID": 0,
+        "text": "Okay, spill the beans. What's going on?",
+        "nextLine": 10
+    },
+    {
+        "id": 10,
+        "speakerID": 2,
+        "text": "(whispers) I found out that our boss is leaving the company next month. It's a secret, so don't tell anyone.",
+        "nextLine": 11
+    },
+    {
+        "id": 11,
+        "speakerID": 1,
+        "text": "Wow, that's big news. How did you find out?",
+        "nextLine": 12
+    },
+    {
+        "id": 12,
+        "speakerID": 2,
+        "text": "I overheard a conversation between our boss and the CEO.",
+        "nextLine": 13
+    },
+    {
+        "id": 13,
+        "speakerID": 0,
+        "text": "We should be careful not to let this leak out. It could cause a lot of problems if people find out too soon.",
+        "nextLine": 14
+    },
+    {
+        "id": 14,
+        "speakerID": 1,
+        "text": "Yeah, let's keep this between us for now.",
+        "nextLine": 15
+    },
+    {
+        "id": 15,
+        "speakerID": 2,
+        "text": "Of course, I wouldn't want to cause any trouble. Thanks for keeping my secret.",
+        "nextLine": 16
+    },
+    {
+        "id": 16,
+        "speakerID": 0,
+        "text": "No problem, we're a team. We have to look out for each other.",
+        "nextLine": 17
+    },
+    {
+        "id": 17,
+        "speakerID": 3,
+        "text": "Person B and C nod in agreement",
         "nextLine": 0
     }
     

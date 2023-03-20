@@ -3,21 +3,33 @@
         "id": 0,
         "name": "Person A",
         "gender": "Male",
-        "msgColor": "#48b421",
-        "isMain": true
+        "bodyColor": "#f8f9fa",
+        "textColor": "#000000",
+        "type": "main"
     },
     {
         "id": 1,
         "name": "Person B",
         "gender": "Female",
-        "msgColor": "#8446e0",
-        "isMain": false
+        "bodyColor": "#8446e0",
+        "textColor": "#FFFFFF",
+        "type": "secondary"
     },
     {
         "id": 2,
         "name": "Person C",
         "gender": "Female",
-        "msgColor": "#49c239",
-        "isMain": false
+        "bodyColor": "#49c239",
+        "textColor": "#000000",
+        "type": "secondary"
+    },
+    {
+        "id": 3,
+        "name": "Narrator",
+        "gender": "Unknown",
+        "bodyColor": "#000000",
+        "textColor": "#FFFFFF",
+        "type": "narrator"
     }
+    
 ]

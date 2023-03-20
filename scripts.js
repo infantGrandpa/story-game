@@ -111,17 +111,22 @@ function CreateMessage(dialogObj) {
     const section = document.querySelector('.conversation');
 
     const character = GetCharacterByID(dialogObj.speakerID);
+    const isMain = character.isMain;
 
     let msg = document.createElement('li');
     msg.classList.add('message');
 
-    if (character.isMain == true) {
+    if (isMain) {
         msg.classList.add('outgoing');
     }
 
     let card = document.createElement('div');
     card.classList.add('card');
-    card.classList.add('text-bg-primary');
+    if (isMain) {
+        card.classList.add('text-bg-light');
+    } else {
+        card.classList.add('text-bg-primary');
+    }
 
     let body = document.createElement('div');
     body.classList.add('card-body');
