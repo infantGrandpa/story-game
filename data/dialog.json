@@ -105,6 +105,18 @@
         "id": 17,
         "speakerID": 3,
         "text": "Person B and C nod in agreement.",
+        "nextLine": 18
+    },
+    {
+        "id": 18,
+        "speakerID": 3,
+        "text": "They all leave, trying to avoid looking suspicious.",
+        "nextLine": 19
+    },
+    {
+        "id": 19,
+        "speakerID": 3,
+        "text": "They look very suspicious.",
         "nextLine": 0
     }
 ]
