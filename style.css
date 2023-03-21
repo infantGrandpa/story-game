@@ -28,11 +28,11 @@ body {
     border-radius: 10px 10px 10px 0;
 }
 
-.message.outgoing {
+.outgoing {
     margin-left: auto;
 }
 
-.message.outgoing > .card {
+.outgoing > .card {
     border-radius: 10px 10px 0 10px;
 }
 
@@ -40,13 +40,17 @@ body {
     padding: 8px 12px;
 }
 
-.message.narrator {
+.narrator {
     width: 100%;
     max-width: 100%;
     text-align: center;
     font-style: italic;
 }
 
-.message.narrator > .card {
+.narrator > .card {
     border-radius: 10px;
+}
+
+.option {
+    font-style: italic;
 }

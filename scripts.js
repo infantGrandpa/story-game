@@ -104,43 +104,90 @@ function ShowCurrentDialog() {
         return;
     }
 
-    CreateMessage(thisDialogObj);
+
+
+    CreateNextLine(thisDialogObj);
 }
 
-function CreateMessage(dialogObj) {
-    const section = document.querySelector('.conversation');
+function CreateNextLine(dialogObj) {
 
     const character = GetCharacterByID(dialogObj.speakerID);
     const characterType = character.type;
 
+    switch (characterType) {
+        case 'main':
+            console.log('Creating main...');
+            CreateMessage(dialogObj, character);
+            break;
+        default:
+            CreateMessage(dialogObj, character);
+            break;
+    }
+
+    currentDialogID = dialogObj.nextLine;
+
+}
+
+function CreateMessage(dialogObj, characterObj) {
+    const section = document.querySelector('.conversation');
+    const characterType = characterObj.type;
+
+    let msg = CreateMsgContainer(characterType);
+
+    let card = CreateMsgCard(dialogObj, characterObj);
+    msg.appendChild(card);
+
+    let author = CreateAuthor(characterObj);
+    if (author !== undefined) {
+        msg.appendChild(author);
+    }
+
+    section.appendChild(msg);
+    window.getComputedStyle(section).height;
+
+}
+
+function CreateMsgContainer(characterType) {
     let msg = document.createElement('li');
     msg.classList.add('message');
     msg = SetMsgClassByType(msg, characterType);
 
 
-    let card = document.createElement('div');
-    card.classList.add('card');
-    card = SetCardColors(card, character);
+    return msg;
+}
 
+function CreateMsgCard(dialogObj, characterObj) {
+
+    let card = document.createElement('div');
+
+    if (characterObj.type == 'main') {
+        card.classList.add('option');
+        card.addEventListener("click", function () { SelectResponse(dialogObj, card); }, { once: true });
+    }
+
+
+    card.classList.add('card');
+    card = SetCardColors(card, characterObj);
 
     let body = document.createElement('div');
     body.classList.add('card-body');
     body.textContent = dialogObj.text;
 
+    card.appendChild(body);
+    console.log(card);
+    return card;
+}
+
+function CreateAuthor(characterObj) {
+    if (characterObj.type == 'narrator') {
+        return;
+    }
+
     let author = document.createElement('small');
     author.classList.add('author');
-    author.textContent = character.name;
+    author.textContent = characterObj.name;
 
-    window.getComputedStyle(section).height;
-    card.appendChild(body);
-    msg.appendChild(card);
-    msg.appendChild(author);
-
-    section.appendChild(msg);
-    window.getComputedStyle(section).height;
-
-    currentDialogID = dialogObj.nextLine;
-
+    return author;
 }
 
 function SetMsgClassByType(msg, characterType) {
@@ -161,23 +208,6 @@ function SetMsgClassByType(msg, characterType) {
     return changedMsg;
 }
 
-function SetCardColorsByType(card, characterType) {
-    let changedCard = card;
-
-    switch (characterType) {
-        case 'main':
-            changedCard.classList.add('text-bg-light');
-            break;
-        case 'narrator':
-            changedCard.classList.add('text-bg-dark');
-            break;
-        default:
-            changedCard.classList.add('text-bg-primary');
-            break;
-    }
-
-    return changedCard;
-}
 
 function SetCardColors(card, character) {
     let changedCard = card;
@@ -192,6 +222,11 @@ function SetCardColors(card, character) {
 
 function GetCharacterByID(id) {
     return characterData[id]
+}
+
+function SelectResponse(dialogObj, card) {
+    card.classList.remove('option');
+    alert("Object " + dialogObj.id + " was clicked.");
 }
 
 FetchCharacters();
