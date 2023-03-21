@@ -67,7 +67,7 @@ async function FetchCharacters() {
 }
 
 async function FetchDialog() {
-    const requestURL = 'https://raw.githubusercontent.com/infantGrandpa/story-game/main/data/dialogue.json';
+    const requestURL = 'https://raw.githubusercontent.com/infantGrandpa/story-game/main/data/dialog.json';
     const request = new Request(requestURL);
 
     const response = await fetch(request);
@@ -131,11 +131,13 @@ function CreateMessage(dialogObj) {
     author.classList.add('author');
     author.textContent = character.name;
 
+    window.getComputedStyle(section).height;
     card.appendChild(body);
     msg.appendChild(card);
     msg.appendChild(author);
 
     section.appendChild(msg);
+    window.getComputedStyle(section).height;
 
     currentDialogID = dialogObj.nextLine;
 

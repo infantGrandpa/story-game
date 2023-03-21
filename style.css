@@ -13,6 +13,9 @@ body {
     margin-left: auto;
     margin-right: auto;
     padding: 0;
+    position: absolute;
+    bottom: 0;
+    transition: height 400ms;
 }
 
 .message {

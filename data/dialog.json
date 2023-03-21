@@ -50,7 +50,7 @@
     {
         "id": 8,
         "speakerID": 3,
-        "text": "All three go to Person A's office",
+        "text": "All three go to Person A's office.",
         "nextLine": 9
     },
     {
@@ -104,8 +104,7 @@
     {
         "id": 17,
         "speakerID": 3,
-        "text": "Person B and C nod in agreement",
+        "text": "Person B and C nod in agreement.",
         "nextLine": 0
     }
-    
 ]

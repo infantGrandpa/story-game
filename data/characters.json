@@ -27,9 +27,8 @@
         "id": 3,
         "name": "Narrator",
         "gender": "Unknown",
-        "bodyColor": "#000000",
+        "bodyColor": "#161616",
         "textColor": "#FFFFFF",
         "type": "narrator"
     }
-    
 ]
