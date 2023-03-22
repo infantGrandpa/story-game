@@ -8,13 +8,13 @@ body {
     color: var(--grey);
 }
 
+.container {
+    border: 1px solid red;
+}
+
 .conversation {
-    max-width: 425px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0;
-    position: absolute;
-    bottom: 0;
+    overflow-y: scroll;
+    max-height: 85vh;
     transition: height 400ms;
 }
 
@@ -53,4 +53,12 @@ body {
 
 .option {
     font-style: italic;
+    cursor: pointer;
+    opacity: 75%;
+    transition: opacity 400ms ease;
+}
+
+.option:hover,
+.option:focus {
+    opacity: 100%;
 }
