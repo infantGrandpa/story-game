@@ -80,9 +80,8 @@ function CreateNextLine(dialogObj) {
 
 function CreateMessage(dialogObj, characterObj) {
     const section = document.querySelector('.conversation');
-    const characterType = characterObj.type;
 
-    let msg = CreateMsgContainer(characterType);
+    let msg = CreateMsgContainer(dialogObj, characterObj);
 
     let card = CreateMsgCard(dialogObj, characterObj);
     msg.appendChild(card);
@@ -98,11 +97,13 @@ function CreateMessage(dialogObj, characterObj) {
 
 }
 
-function CreateMsgContainer(characterType) {
+function CreateMsgContainer(dialogObj, characterObj) {
+    const characterType = characterObj.type;
+
     let msg = document.createElement('li');
     msg.classList.add('message');
     msg = SetMsgClassByType(msg, characterType);
-
+    msg.id = GetMsgElementId(dialogObj);
 
     return msg;
 }
@@ -119,6 +120,7 @@ function CreateMsgCard(dialogObj, characterObj) {
 
 
     card.classList.add('card');
+    card.id = GetCardElementId(dialogObj);
     card = SetCardColors(card, characterObj);
 
     let body = document.createElement('div');
@@ -175,10 +177,29 @@ function GetCharacterByID(id) {
     return characterData[id]
 }
 
+function GetMsgElementId(dialogObj) {
+    return "msg-" + dialogObj.id;
+}
+
+function GetCardElementId(dialogObj) {
+    return "card-" + dialogObj.id;
+}
+
+function DeleteMsgByDialogObj(dialogObj) {
+    const msgToDelete = document.getElementById(GetMsgElementId(dialogObj));
+    msgToDelete.remove();
+}
+
 function SelectResponse(dialogObj) {
     const possibleResponses = document.querySelectorAll(".option");
+    const selectedId = GetCardElementId(dialogObj);
+
     possibleResponses.forEach((thisCard) => {
         thisCard.classList.remove('option');
+        if (thisCard.id != selectedId) {
+            DeleteMsgByDialogObj(dialogObj);
+        }
+
         const clone = thisCard.cloneNode(true);
         thisCard.replaceWith(clone);
     });
