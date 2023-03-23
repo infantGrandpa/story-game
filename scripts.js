@@ -1,6 +1,6 @@
 let characterData;
 let dialogData;
-let currentDialogID;
+let currentDialogObj;
 
 async function fetchData() {
 
@@ -73,7 +73,7 @@ async function FetchDialog() {
     const response = await fetch(request);
     dialogData = await response.json();
 
-    currentDialogID = 0;
+    currentDialogObj = dialogData[0];
 
 }
 
@@ -96,14 +96,18 @@ function PopulateCharacters(obj) {
 
 }
 
-function ShowCurrentDialog() {
+function ShowNextDialog() {
 
-    thisDialogObj = dialogData[currentDialogID]
-    if (thisDialogObj === undefined) {
+    
+    if (currentDialogObj === undefined) {
         console.log("Next dialogue is undefined");
         return;
     }
 
+    //For each next line
+    for (const thisLine of currentDialogObj.nextLine) {
+        console.log("nextLine: " + thisLine.id);
+    }
 
 
     CreateNextLine(thisDialogObj);
@@ -123,8 +127,6 @@ function CreateNextLine(dialogObj) {
             CreateMessage(dialogObj, character);
             break;
     }
-
-    currentDialogID = dialogObj.nextLine;
 
 }
 

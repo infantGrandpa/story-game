@@ -3,13 +3,18 @@
         "id": 0,
         "speakerID": 0,
         "text": "Hey guys, have you heard about the new project we're working on?",
-        "nextLine": 1
+        "nextLine": [
+            1
+        ]
     },
     {
         "id": 1,
         "speakerID": 1,
         "text": "No, what's going on?",
-        "nextLine": 2
+        "nextLine": [
+            2,
+            20
+        ]
     },
     {
         "id": 2,
@@ -118,5 +123,11 @@
         "speakerID": 3,
         "text": "They look very suspicious.",
         "nextLine": 0
+    },
+    {
+        "id": 20,
+        "speakerID": 0,
+        "text": "It's super top secret. I'm important so I get to know it.",
+        "nextLine": 3
     }
 ]
