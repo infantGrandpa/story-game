@@ -9,11 +9,11 @@ body {
 }
 
 .container {
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .conversation {
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     max-height: 85vh;
     transition: height 400ms;
 }

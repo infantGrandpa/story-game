@@ -1,6 +1,7 @@
 let characterData;
 let dialogData;
 let currentDialogObj;
+const onClickEvents = [];
 
 async function FetchCharacters() {
 
@@ -44,7 +45,7 @@ function PopulateCharacters(obj) {
 
 function ShowNextDialog() {
 
-    
+
     if (currentDialogObj === undefined) {
         console.log("Next dialogue is undefined");
         return;
@@ -52,11 +53,11 @@ function ShowNextDialog() {
 
     //For each next line
     for (const thisLine of currentDialogObj.nextLine) {
-        console.log("nextLine: " + thisLine.id);
+        CreateNextLine(dialogData[thisLine]);
     }
 
 
-    CreateNextLine(thisDialogObj);
+
 }
 
 function CreateNextLine(dialogObj) {
@@ -64,13 +65,14 @@ function CreateNextLine(dialogObj) {
     const character = GetCharacterByID(dialogObj.speakerID);
     const characterType = character.type;
 
+    CreateMessage(dialogObj, character);
+
     switch (characterType) {
         case 'main':
-            console.log('Creating main...');
-            CreateMessage(dialogObj, character);
+
             break;
         default:
-            CreateMessage(dialogObj, character);
+            currentDialogObj = dialogObj;
             break;
     }
 
@@ -111,7 +113,8 @@ function CreateMsgCard(dialogObj, characterObj) {
 
     if (characterObj.type == 'main') {
         card.classList.add('option');
-        card.addEventListener("click", function () { SelectResponse(dialogObj); }, { once: true });
+
+        card.addEventListener("click", () => SelectResponse(dialogObj));
     }
 
 
@@ -123,7 +126,6 @@ function CreateMsgCard(dialogObj, characterObj) {
     body.textContent = dialogObj.text;
 
     card.appendChild(body);
-    console.log(card);
     return card;
 }
 
@@ -177,6 +179,8 @@ function SelectResponse(dialogObj) {
     const possibleResponses = document.querySelectorAll(".option");
     possibleResponses.forEach((thisCard) => {
         thisCard.classList.remove('option');
+        const clone = thisCard.cloneNode(true);
+        thisCard.replaceWith(clone);
     });
 
     nextDialogObj = dialogData[dialogObj.nextLine];
