@@ -14,6 +14,12 @@
         "nextLine": [
             2,
             20
+        ],
+        "delayMS": 400,
+        "action": [
+            {
+                "type": "nextLine"
+            }
         ]
     },
     {

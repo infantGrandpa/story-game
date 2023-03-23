@@ -91,9 +91,14 @@ function CreateMessage(dialogObj, characterObj) {
         msg.appendChild(author);
     }
 
-    //section.appendChild(msg);
     section.insertBefore(msg, section.firstChild);
     window.getComputedStyle(section).height;
+
+    //Get Delay
+    
+    
+    //Get Action
+    
 
 }
 
@@ -185,6 +190,15 @@ function GetCardElementId(dialogObj) {
     return "card-" + dialogObj.id;
 }
 
+function GetDialogObjByElementId(idString) {
+    var regex = /\d+/g;
+    var matches = idString.match(regex);  // creates array from matches
+    let dialogObjId = Number(matches.toString());
+    
+    return dialogData[dialogObjId];
+}
+
+
 function DeleteMsgByDialogObj(dialogObj) {
     const msgToDelete = document.getElementById(GetMsgElementId(dialogObj));
     msgToDelete.remove();
@@ -197,7 +211,7 @@ function SelectResponse(dialogObj) {
     possibleResponses.forEach((thisCard) => {
         thisCard.classList.remove('option');
         if (thisCard.id != selectedId) {
-            DeleteMsgByDialogObj(dialogObj);
+            DeleteMsgByDialogObj(GetDialogObjByElementId(thisCard.id));
         }
 
         const clone = thisCard.cloneNode(true);
