@@ -1,17 +1,20 @@
+function CreateEachNextLine(dialogObj) {
+    for (const thisLine of dialogObj.nextLine) {
+        console.log("Creating dialog after " + dialogObj.id + " (" + thisLine + ")...")
+        CreateNextLine(GetDialogObjById(thisLine));
+    }
+}
+
 function CreateNextLine(dialogObj) {
 
     const character = GetCharacterByID(dialogObj.speakerID);
     const characterType = character.type;
 
+    console.log("Creating message for " + dialogObj.id);
     CreateMessage(dialogObj, character);
 
-    switch (characterType) {
-        case 'main':
-
-            break;
-        default:
-            currentDialogObj = dialogObj;
-            break;
+    if (characterType != "main") {
+        SetCurrentDialogObj(dialogObj);
     }
 
 }
@@ -32,14 +35,18 @@ function CreateMessage(dialogObj, characterObj) {
     section.insertBefore(msg, section.firstChild);
     window.getComputedStyle(section).height;
 
-    //Get Delay
-    
-    
-    //Get Action
-
-    console.log(dialogObj.action);
+    DelayBeforeAction(dialogObj)
 
 }
+
+function DelayBeforeAction(dialogObj) {
+    const thisDelay = dialogObj.delayMS ?? 1000;
+
+    setTimeout(function () {
+        ProcessAction(dialogObj);
+    }, thisDelay);
+}
+
 
 function CreateMsgContainer(dialogObj, characterObj) {
     const characterType = characterObj.type;
@@ -114,6 +121,28 @@ function SetCardColors(card, character) {
     changedCard.style.color = color;
 
     return changedCard;
+}
+
+function ProcessAction(dialogObj) {
+
+    if (dialogObj.action === undefined) {
+        return;
+    }
+
+    for (const thisAction of dialogObj.action) {
+        const actionType = thisAction.type;
+        switch (actionType) {
+            case 'nextLine':
+                console.log("Showing next dialog " + dialogObj.nextLine + "...");
+                CreateEachNextLine(dialogObj);
+                break;
+            default:
+                console.log("No action.");
+                break;
+        }
+    }
+
+
 }
 
 function DeleteMsgByDialogObj(dialogObj) {

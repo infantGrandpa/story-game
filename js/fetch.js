@@ -20,7 +20,7 @@ async function FetchDialog() {
     const response = await fetch(request);
     dialogData = await response.json();
 
-    currentDialogObj = dialogData[0];
+    
 
 }
 
@@ -43,21 +43,19 @@ function PopulateCharacters(obj) {
 
 }
 
-function ShowNextDialog() {
+function ShowFirstDialog() {
+    SetCurrentDialogObj(dialogData[0]);
+    CreateNextLine(currentDialogObj);
+}
 
+function ShowNextDialog() {
 
     if (currentDialogObj === undefined) {
         console.log("Next dialogue is undefined");
         return;
     }
 
-    //For each next line
-    for (const thisLine of currentDialogObj.nextLine) {
-        CreateNextLine(dialogData[thisLine]);
-    }
-
-
-
+    CreateEachNextLine(currentDialogObj);
 }
 
 function SelectResponse(dialogObj) {
@@ -78,6 +76,26 @@ function SelectResponse(dialogObj) {
     CreateNextLine(nextDialogObj);
 }
 
+function SetCurrentDialogObj(dialogObj) {
+    
+    let thisId;
+    if (currentDialogObj === undefined) {
+        thisId = "undefined"
+    } else {
+        thisId = currentDialogObj.id;
+    }
+    
+    console.log("Changing dialogObj from " + thisId + " to " + dialogObj.id);
+    currentDialogObj = dialogObj;
+}
+
+function GetDialogObjById(dialogObjId) {
+    return dialogData[dialogObjId];
+}
+
 FetchCharacters();
 FetchDialog();
+
+
+
 
