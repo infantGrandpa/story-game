@@ -39,7 +39,12 @@
         "nextLine": [
             4
         ],
-        "delayMS": 600
+        "delayMS": 600,
+        "action": [
+            {
+                "type": "nextLine"
+            }
+        ]
     },
     {
         "id": 4,
@@ -57,7 +62,12 @@
         "nextLine": [
             6
         ],
-        "delayMS": 600
+        "delayMS": 600,
+        "action": [
+            {
+                "type": "nextLine"
+            }
+        ]
     },
     {
         "id": 6,
@@ -66,7 +76,12 @@
         "nextLine": [
             7
         ],
-        "delayMS": 600
+        "delayMS": 600,
+        "action": [
+            {
+                "type": "nextLine"
+            }
+        ]
     },
     {
         "id": 7,
@@ -84,7 +99,12 @@
         "nextLine": [
             9
         ],
-        "delayMS": 600
+        "delayMS": 600,
+        "action": [
+            {
+                "type": "nextLine"
+            }
+        ]
     },
     {
         "id": 9,
@@ -102,7 +122,12 @@
         "nextLine": [
             11
         ],
-        "delayMS": 600
+        "delayMS": 600,
+        "action": [
+            {
+                "type": "nextLine"
+            }
+        ]
     },
     {
         "id": 11,
@@ -111,7 +136,12 @@
         "nextLine": [
             12
         ],
-        "delayMS": 600
+        "delayMS": 600,
+        "action": [
+            {
+                "type": "nextLine"
+            }
+        ]
     },
     {
         "id": 12,
@@ -120,7 +150,12 @@
         "nextLine": [
             13
         ],
-        "delayMS": 600
+        "delayMS": 600,
+        "action": [
+            {
+                "type": "nextLine"
+            }
+        ]
     },
     {
         "id": 13,
@@ -138,7 +173,12 @@
         "nextLine": [
             15
         ],
-        "delayMS": 600
+        "delayMS": 600,
+        "action": [
+            {
+                "type": "nextLine"
+            }
+        ]
     },
     {
         "id": 15,
@@ -147,7 +187,12 @@
         "nextLine": [
             16
         ],
-        "delayMS": 600
+        "delayMS": 600,
+        "action": [
+            {
+                "type": "nextLine"
+            }
+        ]
     },
     {
         "id": 16,
@@ -165,7 +210,12 @@
         "nextLine": [
             18
         ],
-        "delayMS": 600
+        "delayMS": 600,
+        "action": [
+            {
+                "type": "nextLine"
+            }
+        ]
     },
     {
         "id": 18,
@@ -174,7 +224,12 @@
         "nextLine": [
             19
         ],
-        "delayMS": 600
+        "delayMS": 600,
+        "action": [
+            {
+                "type": "nextLine"
+            }
+        ]
     },
     {
         "id": 19,
@@ -183,7 +238,12 @@
         "nextLine": [
             0
         ],
-        "delayMS": 600
+        "delayMS": 600,
+        "action": [
+            {
+                "type": "nextLine"
+            }
+        ]
     },
     {
         "id": 20,
@@ -203,7 +263,12 @@
             23,
             24
         ],
-        "delayMS": 600
+        "delayMS": 600,
+        "action": [
+            {
+                "type": "nextLine"
+            }
+        ]
     },
     {
         "id": 22,
@@ -239,7 +304,12 @@
         "nextLine": [
             26
         ],
-        "delayMS": 600
+        "delayMS": 600,
+        "action": [
+            {
+                "type": "nextLine"
+            }
+        ]
     },
     {
         "id": 26,
@@ -257,6 +327,11 @@
         "nextLine": [
             3
         ],
-        "delayMS": 600
+        "delayMS": 600,
+        "action": [
+            {
+                "type": "nextLine"
+            }
+        ]
     }
 ]

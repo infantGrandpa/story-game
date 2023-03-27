@@ -10,7 +10,6 @@ function CreateNextLine(dialogObj) {
     const character = GetCharacterByID(dialogObj.speakerID);
     const characterType = character.type;
 
-    console.log("Creating message for " + dialogObj.id);
     CreateMessage(dialogObj, character);
 
     if (characterType != "main") {
@@ -43,6 +42,7 @@ function DelayBeforeAction(dialogObj) {
     const thisDelay = dialogObj.delayMS ?? 1000;
 
     setTimeout(function () {
+        console.log("Delay complete. Processing Action.");
         ProcessAction(dialogObj);
     }, thisDelay);
 }
