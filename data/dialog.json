@@ -6,7 +6,7 @@
         "nextLine": [
             1
         ],
-        "delayMS": 600
+        "delayMS": 1200
     },
     {
         "id": 1,
@@ -16,7 +16,7 @@
             2,
             20
         ],
-        "delayMS": 600,
+        "delayMS": 1200,
         "action": [
             {
                 "type": "nextLine"
@@ -30,7 +30,7 @@
         "nextLine": [
             3
         ],
-        "delayMS": 600
+        "delayMS": 1200
     },
     {
         "id": 3,
@@ -39,7 +39,7 @@
         "nextLine": [
             4
         ],
-        "delayMS": 600,
+        "delayMS": 1200,
         "action": [
             {
                 "type": "nextLine"
@@ -53,7 +53,7 @@
         "nextLine": [
             5
         ],
-        "delayMS": 600
+        "delayMS": 1200
     },
     {
         "id": 5,
@@ -76,7 +76,7 @@
         "nextLine": [
             7
         ],
-        "delayMS": 600,
+        "delayMS": 1200,
         "action": [
             {
                 "type": "nextLine"
@@ -90,7 +90,7 @@
         "nextLine": [
             8
         ],
-        "delayMS": 600
+        "delayMS": 1200
     },
     {
         "id": 8,
@@ -99,7 +99,7 @@
         "nextLine": [
             9
         ],
-        "delayMS": 600,
+        "delayMS": 1200,
         "action": [
             {
                 "type": "nextLine"
@@ -113,7 +113,7 @@
         "nextLine": [
             10
         ],
-        "delayMS": 600
+        "delayMS": 1200
     },
     {
         "id": 10,
@@ -122,7 +122,7 @@
         "nextLine": [
             11
         ],
-        "delayMS": 600,
+        "delayMS": 1200,
         "action": [
             {
                 "type": "nextLine"
@@ -136,7 +136,7 @@
         "nextLine": [
             12
         ],
-        "delayMS": 600,
+        "delayMS": 1200,
         "action": [
             {
                 "type": "nextLine"
@@ -150,7 +150,7 @@
         "nextLine": [
             13
         ],
-        "delayMS": 600,
+        "delayMS": 1200,
         "action": [
             {
                 "type": "nextLine"
@@ -164,7 +164,7 @@
         "nextLine": [
             14
         ],
-        "delayMS": 600
+        "delayMS": 1200
     },
     {
         "id": 14,
@@ -173,7 +173,7 @@
         "nextLine": [
             15
         ],
-        "delayMS": 600,
+        "delayMS": 1200,
         "action": [
             {
                 "type": "nextLine"
@@ -187,7 +187,7 @@
         "nextLine": [
             16
         ],
-        "delayMS": 600,
+        "delayMS": 1200,
         "action": [
             {
                 "type": "nextLine"
@@ -201,7 +201,7 @@
         "nextLine": [
             17
         ],
-        "delayMS": 600
+        "delayMS": 1200
     },
     {
         "id": 17,
@@ -210,7 +210,7 @@
         "nextLine": [
             18
         ],
-        "delayMS": 600,
+        "delayMS": 1200,
         "action": [
             {
                 "type": "nextLine"
@@ -224,7 +224,7 @@
         "nextLine": [
             19
         ],
-        "delayMS": 600,
+        "delayMS": 2000,
         "action": [
             {
                 "type": "nextLine"
@@ -238,7 +238,7 @@
         "nextLine": [
             0
         ],
-        "delayMS": 600,
+        "delayMS": 1200,
         "action": [
             {
                 "type": "nextLine"
@@ -252,7 +252,7 @@
         "nextLine": [
             21
         ],
-        "delayMS": 600
+        "delayMS": 1200
     },
     {
         "id": 21,
@@ -263,7 +263,7 @@
             23,
             24
         ],
-        "delayMS": 600,
+        "delayMS": 1200,
         "action": [
             {
                 "type": "nextLine"
@@ -277,7 +277,7 @@
         "nextLine": [
             25
         ],
-        "delayMS": 600
+        "delayMS": 1200
     },
     {
         "id": 23,
@@ -286,7 +286,7 @@
         "nextLine": [
             25
         ],
-        "delayMS": 600
+        "delayMS": 1200
     },
     {
         "id": 24,
@@ -295,7 +295,7 @@
         "nextLine": [
             27
         ],
-        "delayMS": 600
+        "delayMS": 1200
     },
     {
         "id": 25,
@@ -304,7 +304,7 @@
         "nextLine": [
             26
         ],
-        "delayMS": 600,
+        "delayMS": 1200,
         "action": [
             {
                 "type": "nextLine"
@@ -318,7 +318,7 @@
         "nextLine": [
             3
         ],
-        "delayMS": 600
+        "delayMS": 1200
     },
     {
         "id": 27,
@@ -327,7 +327,7 @@
         "nextLine": [
             3
         ],
-        "delayMS": 600,
+        "delayMS": 1200,
         "action": [
             {
                 "type": "nextLine"
