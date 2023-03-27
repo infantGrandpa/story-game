@@ -76,7 +76,8 @@ function CreateMsgCard(dialogObj, characterObj) {
 
     let body = document.createElement('div');
     body.classList.add('card-body');
-    body.textContent = dialogObj.text;
+    replacedText = ReplaceTextVars(dialogObj.text);
+    body.textContent = replacedText;
 
     card.appendChild(body);
     return card;
@@ -148,4 +149,16 @@ function ProcessAction(dialogObj) {
 function DeleteMsgByDialogObj(dialogObj) {
     const msgToDelete = document.getElementById(GetMsgElementId(dialogObj));
     msgToDelete.remove();
+}
+
+function ReplaceTextVars(inputStr) {
+    outputStr = inputStr;
+    
+    //Check for characters
+    const matches = inputStr.matchAll("[");
+    for (const thisMatch of matches) {
+        console.log("Match: " + thisMatch);
+    }
+
+    return outputStr;
 }
