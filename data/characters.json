@@ -1,7 +1,7 @@
 [
     {
         "id": 0,
-        "name": "Person A",
+        "name": "Issac",
         "gender": "Male",
         "bodyColor": "#f8f9fa",
         "textColor": "#000000",
@@ -9,7 +9,7 @@
     },
     {
         "id": 1,
-        "name": "Person B",
+        "name": "Daphne",
         "gender": "Female",
         "bodyColor": "#8446e0",
         "textColor": "#FFFFFF",
@@ -17,7 +17,7 @@
     },
     {
         "id": 2,
-        "name": "Person C",
+        "name": "Juliette",
         "gender": "Female",
         "bodyColor": "#49c239",
         "textColor": "#000000",

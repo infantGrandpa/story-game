@@ -17,7 +17,3 @@ function GetDialogObjByElementId(idString) {
     
     return dialogData[dialogObjId];
 }
-
-function GetCharacterNameById(charId) {
-    
-}

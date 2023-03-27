@@ -62,7 +62,7 @@
         "nextLine": [
             6
         ],
-        "delayMS": 600,
+        "delayMS": 1200,
         "action": [
             {
                 "type": "nextLine"
@@ -95,7 +95,7 @@
     {
         "id": 8,
         "speakerID": 3,
-        "text": "All three go to Person A's office.",
+        "text": "All three go to Issac's office.",
         "nextLine": [
             9
         ],
@@ -323,7 +323,7 @@
     {
         "id": 27,
         "speakerID": 3,
-        "text": "Person B doesn't respond.",
+        "text": "Daphne doesn't respond.",
         "nextLine": [
             3
         ],
